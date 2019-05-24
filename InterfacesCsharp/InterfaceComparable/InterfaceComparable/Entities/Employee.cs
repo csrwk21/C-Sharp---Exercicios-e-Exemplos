@@ -7,7 +7,7 @@ namespace InterfaceComparable.Entities
     {
         public string Name { get; set; }
         public double Salary { get; set; }
-
+         
         public Employee(string csvEmployee)
         {
             string[] vect = csvEmployee.Split(',');
@@ -18,8 +18,7 @@ namespace InterfaceComparable.Entities
         public override string ToString()
         {
             return Name + ", " 
-                + Salary.ToString("F2", CultureInfo.InvariantCulture);
-               
+                + Salary.ToString("F2", CultureInfo.InvariantCulture);       
         }
 
         public int CompareTo(object obj)
